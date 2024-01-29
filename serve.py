@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/', methods=['POST'])
 def stress_cpu():
     subprocess.Popen(['python', 'stress_cpu.py'])
-    return "CPU stress initiated", 200
+    return "CPU stress initiated", 202
 
 @app.route('/', methods=['GET'])
 def get_private_ip():
